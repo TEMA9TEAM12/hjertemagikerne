@@ -1,0 +1,120 @@
+---
+const options = [
+  { amount: "125 kr", selected: false },
+  { amount: "450 kr", selected: true },
+  { amount: "1000 kr", selected: false },
+  { label: "VALGFRIT BELØB", selected: false },
+];
+
+import Button from "./Button.astro";
+---
+
+<div class="header">
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+
+<header>
+  <div class="grid">
+    <h3>Hjerte <br />Magikerne</h3>
+    <img src="img/tryllestav.svg" alt="tryllestav" />
+    <div class="donation-selector">
+      {
+        options.map((option) => (
+          <div class={`option ${option.selected ? "selected" : ""}`}>
+            {option.amount || option.label}
+          </div>
+        ))
+      }
+    </div>
+    <Button text="STØT NU">
+      <img src="./img/hjertelogo.svg" alt="Lille hjerte" />
+    </Button>
+  </div>
+</header>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 1fr;
+  }
+
+  h3 {
+    font-family: "FunkyFont";
+  }
+  .donation-selector {
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #bac1dd;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    margin: 10px 10px;
+    min-width: 300px;
+  }
+
+  .option {
+    padding: 8px 15px;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+  }
+
+  .option.selected {
+    background-color: #ff97d6;
+  }
+
+  .option:hover:not(.selected) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  header {
+    background-color: #4559b2;
+    margin-top: 7px;
+  }
+
+  img {
+    max-width: 50%;
+  }
+
+  /* Style the header: fixed position (always stay at the top) */
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ff97d6;
+  }
+
+  /* The progress bar (scroll indicator) */
+  .progress-bar {
+    height: 8px;
+    background: #4559b2;
+    width: 0%;
+  }
+</style>
+
+<script>
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function () {
+    myFunction();
+  };
+
+  function myFunction() {
+    var winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  }
+</script>

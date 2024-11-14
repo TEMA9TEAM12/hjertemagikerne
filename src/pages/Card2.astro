@@ -1,0 +1,46 @@
+---
+const header = Astro.props.header;
+const text = Astro.props.text;
+---
+
+<div class="cardcontainer">
+  <div class="card">
+    <slot />
+    <h3>{header}</h3>
+    <p>{text}</p>
+  </div>
+</div>
+
+<style>
+  @font-face {
+    font-family: "FunkyFont";
+    src: url("/funky.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  h3 {
+    font-family: "Funkyfont";
+  }
+
+  .card {
+    background-color: #4559b2;
+    max-width: 45ch;
+    color: #ffffff;
+    border-radius: 28px;
+    /* margin: 30px; */
+    padding: 30px;
+    line-height: 25px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "tiltwarp";
+  }
+
+  .cardcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

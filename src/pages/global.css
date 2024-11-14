@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ebeefb;
+  color: white;
+}
+
+@font-face {
+  font-family: "FunkyFont";
+  src: url("/funky.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "tiltwarp";
+  src: url("./tiltwarp.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-family: "tiltwarp";
+  max-width: 400px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: "FunkyFont";
+  line-height: 50px;
+}
+
+@media (min-width: 800px) {
+  .card1 {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em; */
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .card1 {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 10px;
+  }
+}
+
+img {
+  max-width: 60%;
+}

@@ -1,0 +1,66 @@
+---
+
+---
+
+<footer class="grid">
+  <div>
+    <h3>HJÆLP OG SUPPORT</h3>
+    <p>OFTE STILLEDE SPØRGSMÅL</p>
+    <p>ER DU BLEVET KONTAKTET?</p>
+    <p>WHISTLEBLOWERORDNING</p>
+  </div>
+  <div>
+    <h3>HJÆLP OG SUPPORT</h3>
+    <p>GIV DONATION</p>
+    <p>START EN INDSAMLING</p>
+    <p>WEBSHOP</p>
+  </div>
+  <div>
+    <h3>HJÆLP OG SUPPORT</h3>
+    <p>GIV DONATION</p>
+    <p>BLIV SPONSOR</p>
+    <p>CSR OG PARTNERSKABER</p>
+  </div>
+  <div>
+    <img src="img/logo.svg" alt="logo" />
+  </div>
+</footer>
+
+<style>
+  @font-face {
+    font-family: "tiltwarp";
+    src: url("./tiltwarp.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2em;
+    font-family: "tiltwarp";
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* footer {
+      background-color: #4559b2;
+      color: white;
+      font-family: sans-serif;
+      position: relative;
+      clip-path: path("M0,0 C350,20 930,-30 1440,0 L1440,360 L0,380 Z");
+      margin-top: 10px;
+    } */
+
+  footer {
+    background-image: url("img/footer.svg"); /* Sti til billedet */
+    background-repeat: no-repeat; /* Forhindrer gentagelse af billedet */
+    background-size: cover; /* Tilpasser billedet til at dække hele området */
+    background-position: center; /* Centrerer billedet */
+    margin-top: 10px;
+    padding: 8% 2%;
+  }
+
+  img {
+    max-width: 80%;
+  }
+</style>
