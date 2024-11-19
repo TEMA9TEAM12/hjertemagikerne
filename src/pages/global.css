@@ -56,6 +56,16 @@ h3 {
     margin: 10px;
     justify-content: center;
   }
+  .michael {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em; */
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin: 10px;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 800px) {
@@ -77,6 +87,24 @@ h3 {
     gap: 1em;
     margin: 10px;
   }
+  .card2 {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 10px;
+  }
+  .michael {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 10px;
+  }
 }
 
 .donation {
@@ -86,4 +114,11 @@ h3 {
 
 img {
   max-width: 60%;
+}
+
+video {
+  border-radius: 10px;
+  height: 300px;
+  width: 100%;
+  margin: 20px auto;
 }
