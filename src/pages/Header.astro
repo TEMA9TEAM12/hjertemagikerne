@@ -17,8 +17,7 @@ import Button from "./Button.astro";
 
 <header>
   <div class="grid">
-    <h3>Hjerte <br />Magikerne</h3>
-    <img src="img/tryllestav.svg" alt="tryllestav" />
+    <img src="img/hjertemagikerneheader.svg" alt="tryllestav" />
     <div class="donation-selector">
       {options.map((option) => <div class={`option ${option.selected ? "selected" : ""}`}>{option.amount || option.label}</div>)}
     </div>
@@ -31,7 +30,7 @@ import Button from "./Button.astro";
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
   }
 
   h3 {
