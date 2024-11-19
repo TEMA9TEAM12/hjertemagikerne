@@ -37,7 +37,7 @@ import Button from "./Button.astro";
 <style>
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 4fr 1fr;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
   }
 
   h3 {
@@ -79,7 +79,6 @@ import Button from "./Button.astro";
     max-width: 50%;
   }
 
-  /* Style the header: fixed position (always stay at the top) */
   .header {
     position: fixed;
     top: 0;
@@ -87,14 +86,12 @@ import Button from "./Button.astro";
     width: 100%;
   }
 
-  /* The progress container (grey background) */
   .progress-container {
     width: 100%;
     height: 8px;
     background: #ff97d6;
   }
 
-  /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 8px;
     background: #4559b2;
@@ -103,7 +100,6 @@ import Button from "./Button.astro";
 </style>
 
 <script>
-  // When the user scrolls the page, execute myFunction
   window.onscroll = function () {
     myFunction();
   };

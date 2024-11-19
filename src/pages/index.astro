@@ -4,7 +4,9 @@ import Card2 from "./Card2.astro";
 import Button from "./Button.astro";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
+import Donation from "./Donation.astro";
 import "./global.css";
+import { imageConfig } from "astro:assets";
 ---
 
 <html lang="en">
@@ -26,6 +28,27 @@ import "./global.css";
       </p>
       <Button text="SE MERE" />
     </div>
+    <section class="card2">
+      <Card1
+        header="Mit Header"
+        text="Dette er noget beskrivende tekst for kortet."
+      >
+        <img src="./img/kort.svg" alt="Billede beskrivelse" />
+      </Card1>
+      <Card1
+        header="Mit Header"
+        text="Dette er noget beskrivende tekst for kortet."
+      >
+        <img id="trylle" src="./img/tryllestav.svg" alt="Billede beskrivelse" />
+      </Card1>
+    </section>
+    <section class="donation">
+      <Donation />
+      <Button text="STØT NU">
+        <img src="./img/hjertelogo.svg" alt="Lille hjerte" />
+      </Button>
+    </section>
+
     <section class="card1">
       <Card2
         header="Mit Header"
@@ -46,7 +69,7 @@ import "./global.css";
         <img src="./img/pink.svg" alt="Billede beskrivelse" />
       </Card2>
     </section>
-    <Card1 />
+
     <Footer />
   </body>
 </html>
