@@ -19,7 +19,13 @@ import Button from "./Button.astro";
   <div class="grid">
     <img src="img/hjertemagikerneheader.svg" alt="tryllestav" />
     <div class="donation-selector">
-      {options.map((option) => <div class={`option ${option.selected ? "selected" : ""}`}>{option.amount || option.label}</div>)}
+      {
+        options.map((option) => (
+          <div class={`option ${option.selected ? "selected" : ""}`}>
+            {option.amount || option.label}
+          </div>
+        ))
+      }
     </div>
     <Button text="STØT NU">
       <img src="./img/hjertelogo.svg" alt="Lille hjerte" />
@@ -42,7 +48,7 @@ import Button from "./Button.astro";
     overflow: hidden;
     background-color: #bac1dd;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: tiltwarp;
     font-weight: bolder;
     margin: 25px 5px;
     min-width: 300px;
@@ -98,8 +104,11 @@ import Button from "./Button.astro";
   };
 
   function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
   }

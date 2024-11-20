@@ -8,7 +8,13 @@ const options = [
 ---
 
 <div class="donation-selector">
-  {options.map((option) => <div class={`option ${option.selected ? "selected" : ""}`}>{option.amount || option.label}</div>)}
+  {
+    options.map((option) => (
+      <div class={`option ${option.selected ? "selected" : ""}`}>
+        {option.amount || option.label}
+      </div>
+    ))
+  }
 </div>
 
 <style>
@@ -18,7 +24,7 @@ const options = [
     overflow: hidden;
     background-color: #bac1dd;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: tiltwarp;
     font-weight: bolder;
     margin: 25px 5px;
     min-width: 300px;
