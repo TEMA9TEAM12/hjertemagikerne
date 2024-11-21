@@ -122,3 +122,10 @@ video {
   width: 100%;
   margin: 20px auto;
 }
+
+.hero img {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  position: relative;
+}
